@@ -1,0 +1,143 @@
+:root {
+    --gold: #c5a059;
+    --dark: #1a1a1a;
+    --bg: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+}
+
+/* Nav (Same as other pages) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background: var(--dark);
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.active {
+    color: var(--gold) !important;
+}
+
+/* Contact Section */
+.contact-container {
+    padding: 100px 8%;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    background: white;
+    padding: 60px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.contact-info span {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.contact-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 15px 0;
+}
+
+.info-item {
+    margin-top: 30px;
+}
+
+.info-item h4 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+
+/* Form Styles */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #eee;
+    background: #fcfcfc;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--gold);
+}
+
+.btn-submit {
+    background: var(--dark);
+    color: white;
+    padding: 15px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background: var(--gold);
+}
+
+/* Map Section */
+.map-section {
+    padding: 0 8% 80px;
+}
+
+.map-box {
+    height: 400px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    border: 1px dashed #ccc;
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}

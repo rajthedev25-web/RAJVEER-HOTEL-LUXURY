@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Spa Booking | Grand Essence</title>
+    <link rel="stylesheet" href="spa-booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="spa-container">
+        <div class="spa-visual">
+            <div class="floating-tag">PURE SERENITY</div>
+        </div>
+
+        <div class="spa-form-side">
+            <header class="spa-header">
+                <a href="index.html" class="close-spa">✕</a>
+                <h1>The Zen Sanctuary</h1>
+                <p>Select your ritual for a journey of rejuvenation.</p>
+            </header>
+
+            <form id="spaForm">
+                <div class="input-group">
+                    <label>Choose Your Ritual</label>
+                    <select required>
+                        <option value="" disabled selected>Select Treatment...</option>
+                        <option>Deep Tissue Himalayan Massage</option>
+                        <option>Royal Gold Facial</option>
+                        <option>Aromatic Hot Stone Therapy</option>
+                        <option>Detoxifying Seaweed Wrap</option>
+                    </select>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Preferred Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Therapist Preference</label>
+                        <select>
+                            <option>No Preference</option>
+                            <option>Female Therapist</option>
+                            <option>Male Therapist</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Guest Details</label>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Contact Number" required style="margin-top: 15px;">
+                </div>
+
+                <div class="input-group">
+                    <label>Health Notes / Allergies</label>
+                    <textarea rows="3" placeholder="Any specific concerns?"></textarea>
+                </div>
+
+                <button type="submit" class="spa-btn">RESERVE MY SANCTUARY</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="spaModal" class="spa-modal">
+        <div class="modal-inner">
+            <h2>Ritual Confirmed</h2>
+            <p>Prepare your mind and body. We will contact you shortly to confirm your time slot.</p>
+            <button onclick="window.location.href='index.html'">BREATHE & EXIT</button>
+        </div>
+    </div>
+
+    <script src="spa-booking.js"></script>
+</body>
+</html>

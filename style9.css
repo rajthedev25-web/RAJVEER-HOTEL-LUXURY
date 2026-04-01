@@ -1,0 +1,67 @@
+:root {
+    --gold: #c5a059;
+    --dark: #121212;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 8%; background: var(--dark); color: white;
+}
+
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: #888; font-size: 0.8rem; text-transform: uppercase; }
+.active { color: var(--gold) !important; }
+
+/* Hero */
+.dining-hero {
+    height: 70vh;
+    background: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay span { letter-spacing: 5px; color: var(--gold); font-size: 0.9rem; }
+.hero-overlay h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; font-style: italic; }
+
+/* Chef Section */
+.chef-intro {
+    display: flex; align-items: center; padding: 100px 8%; gap: 60px; background: #fafafa;
+}
+
+.chef-text { flex: 1; }
+.chef-text h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 20px; }
+.chef-text p { line-height: 1.8; color: #555; }
+.chef-image { flex: 1; }
+.chef-image img { width: 100%; height: 500px; object-fit: cover; filter: grayscale(30%); }
+
+/* Menu Section */
+.menu-section { padding: 100px 8%; text-align: center; background: white; }
+.section-title span { color: var(--gold); letter-spacing: 4px; font-size: 0.8rem; }
+.section-title h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 10px 0 60px; }
+
+.menu-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; text-align: left;
+}
+
+.menu-category h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.8rem; border-bottom: 1px solid var(--gold);
+    padding-bottom: 10px; margin-bottom: 30px; color: var(--dark);
+}
+
+.menu-item { margin-bottom: 30px; position: relative; }
+.menu-item span { font-weight: bold; font-size: 1.1rem; }
+.menu-item .price { float: right; color: var(--gold); }
+.menu-item p { font-size: 0.85rem; color: #777; margin-top: 5px; font-style: italic; }
+
+@media (max-width: 768px) {
+    .chef-intro { flex-direction: column; }
+    .hero-overlay h1 { font-size: 3rem; }
+}

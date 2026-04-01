@@ -1,0 +1,96 @@
+:root {
+    --gold: #c5a059;
+    --soft-white: #fcfcfc;
+    --text: #444;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { background: var(--soft-white); overflow: hidden; }
+
+.spa-container { display: flex; height: 100vh; }
+
+/* Visual Side */
+.spa-visual {
+    flex: 1.2;
+    background: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200') center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-tag {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 30px;
+    letter-spacing: 5px;
+    font-size: 0.7rem;
+    color: var(--gold);
+    border-radius: 50px;
+}
+
+/* Form Side */
+.spa-form-side {
+    flex: 1;
+    padding: 60px 80px;
+    background: white;
+    overflow-y: auto;
+}
+
+.close-spa { 
+    text-decoration: none; color: #ccc; font-size: 1.5rem; 
+    float: right; transition: 0.3s;
+}
+.close-spa:hover { color: var(--gold); }
+
+.spa-header { margin-bottom: 50px; }
+.spa-header h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #222; margin-top: 20px; }
+.spa-header p { color: #888; font-style: italic; margin-top: 10px; }
+
+/* Form Elements */
+.input-group { margin-bottom: 25px; }
+.input-row { display: flex; gap: 20px; }
+.input-row .input-group { flex: 1; }
+
+label { display: block; font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 600; }
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    outline: none;
+    background: transparent;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus { border-bottom-color: var(--gold); }
+
+.spa-btn {
+    width: 100%;
+    background: #222;
+    color: var(--gold);
+    border: none;
+    padding: 20px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+
+.spa-btn:hover { background: var(--gold); color: white; }
+
+/* Modal */
+.spa-modal {
+    display: none; position: fixed; inset: 0; background: rgba(255,255,255,0.95);
+    z-index: 100; align-items: center; justify-content: center; text-align: center;
+}
+.modal-inner h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); }
+.modal-inner button { background: none; border: 1px solid var(--gold); padding: 10px 30px; margin-top: 30px; cursor: pointer; color: var(--gold); letter-spacing: 2px; }
+
+@media (max-width: 1000px) {
+    .spa-visual { display: none; }
+    .spa-form-side { padding: 40px 20px; }
+}
