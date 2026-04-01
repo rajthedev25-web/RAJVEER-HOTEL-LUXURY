@@ -1,0 +1,46 @@
+:root {
+    --gold: #c5a059;
+    --deep-blue: #0d1b2a;
+    --cream: #f9f6f2;
+}
+
+* { margin:0; padding:0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+.butler-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1563298723-dcfebaa392e3?w=1600') center/cover fixed;
+    display: flex; flex-direction: column; text-align: center; color: white;
+}
+
+nav { display: flex; justify-content: space-between; padding: 30px 8%; align-items: center; }
+.logo { font-family: 'Playfair Display', serif; letter-spacing: 4px; font-size: 1.5rem; color: var(--gold); }
+.nav-back { color: white; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; }
+
+.hero-content { margin-top: 80px; }
+.hero-content span { letter-spacing: 6px; font-size: 0.9rem; color: var(--gold); }
+.hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-top: 10px; }
+
+.butler-section { padding: 100px 8%; background: white; }
+.dark-bg { background: var(--deep-blue); color: white; }
+
+.butler-info { text-align: center; margin-bottom: 60px; }
+.butler-info h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; }
+.gold-text { color: var(--gold); }
+.butler-info p { color: #666; max-width: 750px; margin: 0 auto; line-height: 1.8; font-style: italic; }
+.dark-bg p { color: #cbd5e0; }
+
+/* GRIDS */
+.butler-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.butler-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.b-card { height: 450px; overflow: hidden; position: relative; border-radius: 2px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.b-card img { width: 100%; height: 100%; object-fit: cover; transition: 1.2s cubic-bezier(0.2, 1, 0.3, 1); }
+
+.b-card:hover img { transform: scale(1.1); filter: brightness(1.1); }
+
+.butler-footer { background: #000; text-align: center; padding: 80px 0; color: var(--gold); }
+.butler-footer h3 { font-family: 'Playfair Display', serif; font-size: 2.5rem; letter-spacing: 3px; }
+
+@media (max-width: 900px) {
+    .butler-grid-4, .butler-grid-3 { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Gallery | Grand Essence</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="gallery-hero">
+        <nav>
+            <div class="logo">GRAND ESSENCE</div>
+            <a href="INDEX.HTML" class="nav-back">← BACK TO HOME</a>
+        </nav>
+        <div class="hero-content">
+            <span>A VISUAL LEGACY</span>
+            <h1>The Grand Gallery</h1>
+        </div>
+    </header>
+
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="rooms">SUITES</button>
+        <button class="filter-btn" data-filter="dining">DINING</button>
+        <button class="filter-btn" data-filter="events">EVENTS</button>
+    </div>
+
+    <main class="gallery-container">
+        <div class="gallery-item rooms">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800" alt="Luxury Suite">
+        </div>
+        <div class="gallery-item dining">
+            <img src="https://images.unsplash.com/photo-1611520175743-30ff00129621?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmluZSUyMGRpbmluZ3xlbnwwfHwwfHx8MA%3D%3D?w=800" alt="Fine Dining">
+        </div>
+        <div class="gallery-item events">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800" alt="Grand Ballroom">
+        </div>
+        <div class="gallery-item rooms">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800" alt="Bedroom View">
+        </div>
+        <div class="gallery-item dining">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800" alt="Butler Service">
+        </div>
+        <div class="gallery-item events">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800" alt="Royal Wedding">
+        </div>
+        <div class="gallery-item rooms">
+            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800" alt="Poolside">
+        </div>
+        <div class="gallery-item dining">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800" alt="Wine Cellar">
+        </div>
+        <div class="gallery-item events">
+            <img src="https://plus.unsplash.com/premium_photo-1670333351937-68cb2735a0fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFydHl8ZW58MHx8MHx8fDA%3D?w=800" alt="party">
+        </div>
+        <div class="gallery-item events">
+            <img src="https://plus.unsplash.com/premium_photo-1664391631217-d53431f0effd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29ycG9yYXRlJTIwZ2FsYXxlbnwwfHwwfHx8MA%3D%3D?w=800" alt="Corporate Gala">
+        </div>
+        <div class="gallery-item rooms">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800" alt="Lobby Lounge">
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="img01">
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

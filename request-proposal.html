@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Proposal | Grand Essence</title>
+    <link rel="stylesheet" href="request-proposal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="proposal-page">
+        <div class="proposal-visual">
+            <div class="visual-overlay">
+                <div class="visual-text">
+                    <span>EVENT PLANNING</span>
+                    <h1>Host Your Legacy</h1>
+                    <p>From royal weddings to global summits, we turn your vision into a historic reality.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="proposal-form-container">
+            <nav class="form-nav">
+                <a href="index.html" class="back-link">← BACK TO ESTATE</a>
+            </nav>
+
+            <div class="form-wrapper">
+                <h2>Event Proposal Request</h2>
+                <p>Provide your event details and our specialist will curate a bespoke offer for you.</p>
+
+                <form id="proposalForm">
+                    <div class="form-section">
+                        <h3>1. Personal Information</h3>
+                        <div class="input-row">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>2. Event Details</h3>
+                        <div class="input-row">
+                            <select required>
+                                <option value="" disabled selected>Event Type</option>
+                                <option>Royal Wedding</option>
+                                <option>Corporate Gala</option>
+                                <option>Private Celebration</option>
+                                <option>Product Launch</option>
+                            </select>
+                            <input type="date" required>
+                        </div>
+                        <div class="input-row">
+                            <input type="number" placeholder="Expected Guests (e.g. 200)" required>
+                            <input type="text" placeholder="Preferred Venue (e.g. Ballroom)">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>3. Additional Vision</h3>
+                        <textarea rows="4" placeholder="Tell us more about your requirements (Catering, Decor, Accommodation)..."></textarea>
+                    </div>
+
+                    <button type="submit" class="proposal-btn">SUBMIT PROPOSAL REQUEST</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="successPop" class="success-screen">
+        <div class="success-card">
+            <div class="check-icon">✓</div>
+            <h2>Request Submitted</h2>
+            <p>Our Event Director will contact you within 24 hours to discuss the details.</p>
+            <button onclick="window.location.href='index.html'">RETURN TO HOME</button>
+        </div>
+    </div>
+
+    <script src="request-proposal.js"></script>
+</body>
+</html>

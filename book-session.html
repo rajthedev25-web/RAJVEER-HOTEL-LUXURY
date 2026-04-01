@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Private Session | Grand Essence</title>
+    <link rel="stylesheet" href="book-session.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="session-layout">
+        <aside class="image-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo-link">GRAND ESSENCE</a>
+            </div>
+            <div class="sidebar-gallery">
+                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800" alt="Spa" class="active">
+                <img src="https://images.unsplash.com/photo-1518611012118-2969c63b07b7?w=800" alt="Yoga">
+                <img src="https://images.unsplash.com/photo-1491333078588-55b6733c7de6?w=800" alt="Stylist">
+                <img src="https://images.unsplash.com/photo-1519311965067-36d3e5f33d39?w=800" alt="Academy">
+            </div>
+        </aside>
+
+        <main class="form-container">
+            <div class="form-scroll">
+                <header class="form-intro">
+                    <span>BESPOKE EXPERIENCES</span>
+                    <h1>Request a Session</h1>
+                    <p>Our experts are at your service for a truly transformative hour.</p>
+                </header>
+
+                <form id="sessionForm">
+                    <div class="input-block">
+                        <label>Select Experience</label>
+                        <select id="experienceType" required>
+                            <option value="" disabled selected>Choose your path...</option>
+                            <option value="wellness">Wellness & Zen Yoga</option>
+                            <option value="styling">Personal Styling Session</option>
+                            <option value="academy">Royal Kids Academy</option>
+                            <option value="butler">Etiquette & Butler Training</option>
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-block">
+                            <label>Preferred Date</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="input-block">
+                            <label>Duration</label>
+                            <select>
+                                <option>60 Minutes</option>
+                                <option>90 Minutes</option>
+                                <option>Full Day Immersion</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-block">
+                        <label>Personal Details</label>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required style="margin-top:15px;">
+                    </div>
+
+                    <div class="input-block">
+                        <label>Special Requirements</label>
+                        <textarea rows="4" placeholder="Any allergies, preferences, or goals for this session?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-session">BOOK THE EXPERIENCE</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div id="confirmOverlay" class="confirm-overlay">
+        <div class="confirm-box">
+            <h2>Session Scheduled</h2>
+            <p>A concierge will contact you shortly to finalize the details.</p>
+            <button onclick="window.location.href='index.html'">BACK TO ESTATE</button>
+        </div>
+    </div>
+
+    <script src="book-session.js"></script>
+</body>
+</html>

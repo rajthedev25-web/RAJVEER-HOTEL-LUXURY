@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Booking | Grand Essence</title>
+    <link rel="stylesheet" href="style5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GRAND ESSENCE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="book-now.html" class="active">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <section class="booking-container">
+        <div class="booking-grid">
+            
+            <div class="booking-form-section">
+                <h2>Reservation Details</h2>
+                <form id="finalBookingForm">
+                    <div class="form-group">
+                        <label>Select Your Suite</label>
+                        <select id="roomSelect" required>
+                            <option value="250">Deluxe King Room - $250/night</option>
+                            <option value="450">Ocean View Suite - $450/night</option>
+                            <option value="1200">Presidential Penthouse - $1,200/night</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Check-In</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Check-Out</label>
+                            <input type="date" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Credit Card Number</label>
+                        <input type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                    </div>
+
+                    <button type="submit" class="confirm-btn">Confirm Reservation</button>
+                </form>
+            </div>
+
+            <div class="booking-summary">
+                <h3>Your Stay</h3>
+                <div class="summary-line">
+                    <span>Room Total</span>
+                    <span id="roomPrice">$0.00</span>
+                </div>
+                <div class="summary-line">
+                    <span>Service Tax (10%)</span>
+                    <span id="taxPrice">$0.00</span>
+                </div>
+                <hr>
+                <div class="summary-line total">
+                    <span>Grand Total</span>
+                    <span id="totalPrice">$0.00</span>
+                </div>
+                <p class="secure-text">🔒 256-bit SSL Secure Encryption</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script5.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Table | Grand Essence</title>
+    <link rel="stylesheet" href="book-table.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="booking-container">
+        <div class="booking-image">
+            <div class="overlay-text">
+                <span>FINE DINING</span>
+                <h1>A Taste of Royalty</h1>
+                <p>Reserve your private corner in our Michelin-starred hall.</p>
+            </div>
+        </div>
+
+        <div class="booking-form-side">
+            <nav>
+                <a href="INDEX.HTML" class="back-home">← BACK</a>
+            </nav>
+            
+            <div class="form-header">
+                <h2>Table Reservation</h2>
+                <p>Please fill in the details for your gastronomic journey.</p>
+            </div>
+
+            <form id="reservationForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your Excellency's Name" required>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Time</label>
+                        <select required>
+                            <option value="" disabled selected>Select Slot</option>
+                            <option>19:00 - 20:30</option>
+                            <option>20:30 - 22:00</option>
+                            <option>22:00 - Late Night</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Number of Guests</label>
+                    <input type="number" min="1" max="10" placeholder="2">
+                </div>
+
+                <div class="input-group">
+                    <label>Special Requests (Dietary/Occasion)</label>
+                    <textarea rows="3" placeholder="Anniversary, Vegan, Window Seat..."></textarea>
+                </div>
+
+                <button type="submit" class="gold-btn">CONFIRM RESERVATION</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h3>Reservation Received</h3>
+            <p>Your table is being prepared. We look forward to hosting you.</p>
+            <button onclick="closeModal()">EXCELLENT</button>
+        </div>
+    </div>
+
+    <script src="book-table.js"></script>
+</body>
+</html>

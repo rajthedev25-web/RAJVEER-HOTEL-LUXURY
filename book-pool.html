@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Pool Reservation | Grand Essence</title>
+    <link rel="stylesheet" href="book-pool.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="pool-wrapper">
+        <div class="pool-hero">
+            <div class="hero-overlay">
+                <div class="badge">CHILL & REFRESH</div>
+                <h1>The Infinity Edge</h1>
+                <p>Dive into a world where the water meets the sky.</p>
+            </div>
+        </div>
+
+        <div class="pool-form-area">
+            <nav>
+                <a href="index.html" class="exit-btn">BACK TO LOBBY</a>
+            </nav>
+
+            <div class="pool-header">
+                <h2>Poolside Reservation</h2>
+                <p>Reserve your private lounge or a poolside cabana.</p>
+            </div>
+
+            <form id="poolForm">
+                <div class="input-box">
+                    <label>Select Your Spot</label>
+                    <select required>
+                        <option value="" disabled selected>Where would you like to relax?</option>
+                        <option>Standard Sun Lounger (Poolside)</option>
+                        <option>Private VIP Cabana (Max 4 persons)</option>
+                        <option>Floating Breakfast Slot (Morning only)</option>
+                        <option>Sunset Deck Table</option>
+                    </select>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-box">
+                        <label>Date</label>
+                        <input type="date" required id="poolDate">
+                    </div>
+                    <div class="input-box">
+                        <label>Time Slot</label>
+                        <select required>
+                            <option>Sunrise (06:00 - 09:00)</option>
+                            <option>Mid-Day (10:00 - 15:00)</option>
+                            <option>Golden Hour (16:00 - 19:00)</option>
+                            <option>Night Swim (20:00 - 22:00)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label>Guest Details</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Special Requests</label>
+                    <textarea rows="3" placeholder="Extra towels, champagne on arrival, etc."></textarea>
+                </div>
+
+                <button type="submit" class="pool-btn">SECURE MY SPOT</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="poolSuccess" class="pool-modal">
+        <div class="modal-card">
+            <h2>See You At The Edge</h2>
+            <p>Your poolside spot is reserved. Please check-in at the pool concierge upon arrival.</p>
+            <button onclick="window.location.href='index.html'">PERFECT</button>
+        </div>
+    </div>
+
+    <script src="book-pool.js"></script>
+</body>
+</html>

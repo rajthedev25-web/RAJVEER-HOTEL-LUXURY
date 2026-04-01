@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Your Stay | Grand Essence</title>
+    <link rel="stylesheet" href="book-room.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="booking-wrapper">
+        <div class="room-visual">
+            <div class="visual-info">
+                <span>PREMIUM SUITES</span>
+                <h1>Grand Essence Royal</h1>
+                <p>Starting from $1,200 / Night</p>
+            </div>
+        </div>
+
+        <div class="booking-panel">
+            <nav class="panel-nav">
+                <a href="index.html" class="back-btn">← BACK</a>
+            </nav>
+
+            <div class="panel-header">
+                <h2>Reservation</h2>
+                <p>Experience the pinnacle of luxury and comfort.</p>
+            </div>
+
+            <form id="roomForm">
+                <div class="input-field">
+                    <label>Select Suite Type</label>
+                    <select required>
+                        <option value="" disabled selected>Choose your sanctuary...</option>
+                        <option>The Heritage Suite</option>
+                        <option>Presidential Penthouse</option>
+                        <option>Royal Garden Villa</option>
+                        <option>Executive Skyline Room</option>
+                    </select>
+                </div>
+
+                <div class="date-row">
+                    <div class="input-field">
+                        <label>Arrival Date</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Departure Date</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Guests</label>
+                    <div class="guest-inputs">
+                        <input type="number" min="1" max="4" placeholder="Adults" required>
+                        <input type="number" min="0" max="2" placeholder="Children">
+                    </div>
+                </div>
+
+                <div class="input-field">
+                    <label>Personal Concierge Note</label>
+                    <textarea rows="2" placeholder="Any special requests? (Airport pickup, etc.)"></textarea>
+                </div>
+
+                <button type="submit" class="reserve-btn">CONFIRM AVAILABILITY</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="successOverlay" class="overlay-msg">
+        <div class="msg-box">
+            <h2>Request Received</h2>
+            <p>Our reservations manager will confirm your stay within the next hour.</p>
+            <button onclick="window.location.href='index.html'">RETURN TO ESTATE</button>
+        </div>
+    </div>
+
+    <script src="book-room.js"></script>
+</body>
+</html>

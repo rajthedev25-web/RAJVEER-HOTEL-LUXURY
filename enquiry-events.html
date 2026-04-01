@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Enquiry | Premium Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="enquiry-events.css">
+</head>
+<body>
+
+    <a href="index.html" class="floating-home">
+        <i class="fas fa-home"></i> <span>Home</span>
+    </a>
+
+    <div class="page-container">
+        <div class="enquiry-card">
+            <div class="form-header">
+                <h1>Plan Your Event</h1>
+                <p>Fill out the details below, and our luxury concierge will contact you.</p>
+            </div>
+
+            <form id="eventForm">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="example@mail.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Contact Number</label>
+                        <input type="tel" id="phone" placeholder="+91 00000-00000" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Event Type</label>
+                        <select id="eventType" required>
+                            <option value="">Select Event</option>
+                            <option value="Wedding">Wedding Celebration</option>
+                            <option value="Corporate">Corporate Meeting</option>
+                            <option value="Birthday">Private Birthday</option>
+                            <option value="Gala">Luxury Gala</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Event Date</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Approx. Guests</label>
+                        <input type="number" id="guests" placeholder="e.g. 100">
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Tell us more about your vision</label>
+                    <textarea id="message" rows="4" placeholder="Any special requests?"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Enquiry</button>
+            </form>
+
+            <div id="successBox" class="hidden">
+                <div class="success-icon">✓</div>
+                <h2>Enquiry Sent</h2>
+                <p>We have received your request. Check your email for confirmation.</p>
+                <a href="index.html" class="back-home-btn">Return to Home Page</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="enquiry-events.js"></script>
+</body>
+</html>

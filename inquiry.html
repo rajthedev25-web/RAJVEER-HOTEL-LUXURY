@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry | Grand Essence Concierge</title>
+    <link rel="stylesheet" href="inquiry.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="inquiry-wrapper">
+        <div class="bg-overlay"></div>
+
+        <nav class="inquiry-nav">
+            <div class="logo">GRAND ESSENCE</div>
+            <a href="index.html" class="close-btn">&times;</a>
+        </nav>
+
+        <main class="inquiry-content">
+            <div class="inquiry-card">
+                <div class="card-header">
+                    <span>CONCIERGE SERVICES</span>
+                    <h1>General Inquiry</h1>
+                    <p>How may we assist you in crafting your perfect stay?</p>
+                </div>
+
+                <form id="inquiryForm">
+                    <div class="form-row">
+                        <div class="field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="e.g. Alexander Knight" required>
+                        </div>
+                        <div class="field">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="contact@domain.com" required>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Subject of Interest</label>
+                        <select>
+                            <option>Private Event Planning</option>
+                            <option>Corporate Retreats</option>
+                            <option>VVIP Membership</option>
+                            <option>Heli-Pad Access</option>
+                            <option>Other Royal Requests</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Your Message</label>
+                        <textarea rows="4" placeholder="Describe your requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">SEND REQUEST</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div id="thankYou" class="thank-you">
+        <div class="msg-box">
+            <h2>Request Logged</h2>
+            <p>Our concierge will reach out to you within the hour.</p>
+            <button onclick="window.location.href='index.html'">RETURN HOME</button>
+        </div>
+    </div>
+
+    <script src="inquiry.js"></script>
+</body>
+</html>

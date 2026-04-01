@@ -1,0 +1,133 @@
+/* Color Palette */
+:root {
+    --gold: #d4af37;
+    --black: #111111;
+    --white: #ffffff;
+    --soft-gray: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.main-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+/* Image Section */
+.hero-sidebar {
+    flex: 1;
+    min-width: 350px;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+}
+
+/* Form Section */
+.form-content {
+    flex: 1;
+    min-width: 350px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--soft-gray);
+}
+
+#booking-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 0; /* Sharp edges look premium */
+    font-family: inherit;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.prime-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--black);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.prime-btn:hover {
+    background-color: var(--gold);
+}
+
+/* Success Message Styling */
+.hidden { display: none; }
+
+#successState {
+    text-align: center;
+}
+
+.success-icon {
+    font-size: 50px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero-sidebar { min-height: 250px; }
+    .form-content { padding: 30px; }
+}

@@ -1,0 +1,90 @@
+:root {
+    --gold: #c5a059;
+    --dark-bg: #0f0f0f;
+    --border: #2a2a2a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body { background: var(--dark-bg); color: white; overflow: hidden; }
+
+.booking-wrapper { display: flex; height: 100vh; }
+
+/* Visual Side */
+.room-visual {
+    flex: 1.3;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=1200') center/cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+}
+
+.visual-info span { color: var(--gold); letter-spacing: 5px; font-size: 0.8rem; }
+.visual-info h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 10px 0; }
+.visual-info p { letter-spacing: 2px; opacity: 0.8; }
+
+/* Form Side */
+.booking-panel {
+    flex: 1;
+    background: #050505;
+    padding: 50px 70px;
+    overflow-y: auto;
+    border-left: 1px solid var(--border);
+}
+
+.back-btn { text-decoration: none; color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; }
+
+.panel-header { margin: 40px 0; }
+.panel-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--gold); }
+.panel-header p { color: #666; font-size: 0.9rem; }
+
+/* Form Elements */
+.input-field { margin-bottom: 25px; }
+.date-row { display: flex; gap: 20px; }
+.date-row .input-field { flex: 1; }
+
+label { display: block; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #555; margin-bottom: 10px; }
+
+input, select, textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: white;
+    padding: 12px 0;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus { border-bottom-color: var(--gold); }
+
+.guest-inputs { display: flex; gap: 20px; }
+
+.reserve-btn {
+    width: 100%;
+    padding: 20px;
+    background: var(--gold);
+    color: black;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 3px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+
+.reserve-btn:hover { background: white; transform: translateY(-3px); }
+
+/* Success Msg */
+.overlay-msg {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95);
+    z-index: 100; align-items: center; justify-content: center; text-align: center;
+}
+.msg-box h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); }
+.msg-box p { color: #aaa; margin: 20px 0; }
+.msg-box button { background: var(--gold); border: none; padding: 12px 40px; cursor: pointer; font-weight: bold; }
+
+@media (max-width: 1000px) {
+    .room-visual { display: none; }
+    .booking-panel { padding: 40px 20px; }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Stylist | Book Consultation</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="book-consaltation.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="hero-sidebar">
+            <div class="overlay-text">
+                <h1>Signature Style</h1>
+                <p>Curating your perfect wardrobe.</p>
+            </div>
+        </div>
+
+        <div class="form-content">
+            <div id="booking-box">
+                <h2>Book a Session</h2>
+                <p class="subtitle">Personalized fashion consultancy starts here.</p>
+
+                <form id="consultForm">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="clientName" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Service Type</label>
+                        <select id="serviceType" required>
+                            <option value="">Choose a service...</option>
+                            <option value="Personal Shopping">Personal Shopping</option>
+                            <option value="Closet Edit">Closet Edit</option>
+                            <option value="Event Styling">Event Styling</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Preferred Date</label>
+                        <input type="date" id="bookDate" required>
+                    </div>
+
+                    <button type="submit" class="prime-btn">Request Booking</button>
+                </form>
+            </div>
+
+            <div id="successState" class="hidden">
+                <div class="success-icon">✓</div>
+                <h3>Request Received!</h3>
+                <p>Thank you <span id="userName"></span>. I will check my schedule and email you shortly.</p>
+                <button onclick="window.location.reload()" class="prime-btn">Go Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="book-consaltation.js"></script>
+</body>
+</html>
