@@ -147,7 +147,7 @@ document.getElementById('subscribe-form').addEventListener('submit', function(ev
 
     // Apni IDs yahan dalo
     const serviceID = 'service_btssxbn'; 
-    const templateID = 'YOUR_TEMPLATE_ID'; 
+    const templateID = 'template_zlak3tf'; 
 
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
