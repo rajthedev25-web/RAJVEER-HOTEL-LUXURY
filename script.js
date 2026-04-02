@@ -139,3 +139,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+
+
+// 1. Sabse upar initialize karo (Aapne Head mein kar diya hoga, par safe side ke liye yahan bhi theek hai)
+// emailjs.init("YOUR_PUBLIC_KEY"); 
+
+document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Ye page ko reload hone se rokega
+
+    const btn = this.querySelector('button'); 
+    const originalText = btn.innerText;
+    btn.innerText = 'SENDING...';
+
+    // 2. Ye hai wo "Engine" jo aapne miss kiya tha
+    // In IDs ko apne EmailJS Dashboard se badal lena
+    const serviceID = 'service_id_yahan'; 
+    const templateID = 'template_id_yahan';
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then((response) => {
+            // Agar sab sahi raha toh ye chalega
+            console.log('SUCCESS!', response.status, response.text);
+            btn.innerText = 'SUBSCRIBED!';
+            alert('Bhai, Dhanaywad! Humein aapka email mil gaya.');
+            this.reset(); // Form khali kar dega
+
+            // 3 second baad button wapas normal
+            setTimeout(() => { btn.innerText = originalText; }, 3000);
+        }, (error) => {
+            // Agar error aaya toh yahan dikhega
+            console.log('FAILED...', error);
+            btn.innerText = 'FAILED';
+            alert('Oops! Error: ' + JSON.stringify(error));
+            setTimeout(() => { btn.innerText = originalText; }, 3000);
+        });
+});
