@@ -1,0 +1,35 @@
+/* --- Universal Responsive Fix --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    /* Saare split layouts ko vertical kar dega */
+    .booking-container, .proposal-page, .spa-container, 
+    .pool-wrapper, .session-layout, .booking-wrapper {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    /* Images ki height mobile pe set karega */
+    .booking-image, .proposal-visual, .spa-visual, 
+    .pool-hero, .room-visual, .image-sidebar {
+        width: 100% !important;
+        height: 250px !important;
+        flex: none !important;
+    }
+
+    /* Form areas ko full width karega */
+    .booking-form-side, .proposal-form-container, .spa-form-side, 
+    .pool-form-area, .booking-panel, .form-container {
+        width: 100% !important;
+        padding: 30px 20px !important;
+    }
+
+    /* Typography adjustment */
+    h1 { font-size: 2rem !important; letter-spacing: 3px !important; }
+    h2 { font-size: 1.8rem !important; }
+}
+
