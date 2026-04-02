@@ -156,8 +156,8 @@ document.getElementById('subscribe-form').addEventListener('submit', function(ev
 
     // 2. Ye hai wo "Engine" jo aapne miss kiya tha
     // In IDs ko apne EmailJS Dashboard se badal lena
-    const serviceID = 'service_id_yahan'; 
-    const templateID = 'template_id_yahan';
+    const serviceID = 'service_btssxbn'; 
+    const templateID = 'template_zlak3tf';
 
     emailjs.sendForm(serviceID, templateID, this)
         .then((response) => {
